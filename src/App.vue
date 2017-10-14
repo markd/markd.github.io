@@ -1,3 +1,29 @@
+<template>
+  <div id="app">
+    <app-header></app-header>
+    <app-content></app-content>
+    <app-footer></app-footer>
+    <router-view/>
+  </div>
+</template>
+
+<script>
+import Header from './components/Header.vue'
+import Content from './components/Content.vue'
+import Footer from './components/Footer.vue'
+
+export default {
+  name: 'app',
+  components: {
+    appHeader: Header,
+    appContent: Content,
+    appFooter: Footer
+  }
+}
+</script>
+
+<style>
+
 /* DEBUGGING */
 !
 * {
@@ -165,3 +191,5 @@ svg {
   margin-top: var(--space);
   height: 50px;
 }
+
+</style>
